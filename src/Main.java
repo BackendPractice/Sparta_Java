@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       Scanner sc = new Scanner(System.in);  // Scanner 클래스 생성
+        Scanner sc = new Scanner(System.in);  // Scanner 클래스 생성
 
-       int ascilNum = sc.nextInt();  // 정수 입력
-       char ch = (char)ascilNum;  // 문자 변환
+        char letter = sc.nextLine().charAt(0);  // 문자 입력 - 첫번째 문자만 받음
+        int ascilNum = (int)letter;  // 정수 변환
 
-        System.out.println(ch);
+        System.out.println(ascilNum);
     }
 }
