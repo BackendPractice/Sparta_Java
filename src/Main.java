@@ -2,11 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);  // Scanner 클래스 생성
+        // 실수를 정수로 형 변환하는 예제
+        double doubleNum = 10.101010;
+        float floatNum = 10.101010f;
 
-        char letter = sc.nextLine().charAt(0);  // 문자 입력 - 첫번째 문자만 받음
-        int ascilNum = (int)letter;  // 정수 변환
+        int intNumByDouble = (int)doubleNum;
+        int intNumByFloat = (int)floatNum;
 
-        System.out.println(ascilNum);
+        System.out.println(intNumByDouble);
+        System.out.println(intNumByFloat);
     }
 }
