@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // 실수를 정수로 형 변환하는 예제
-        double doubleNum = 10.101010;
-        float floatNum = 10.101010f;
+        // 정수를 실수로 형 변환하는 예제
+        int intNum = 10;
 
-        int intNumByDouble = (int)doubleNum;
-        int intNumByFloat = (int)floatNum;
+        double doubleNum = (double)intNum;
+        float floatNum = (float)intNum;
 
-        System.out.println(intNumByDouble);
-        System.out.println(intNumByFloat);
+        System.out.println("intNum: " + intNum);
+        System.out.println("doubleNum: " + doubleNum);
+        System.out.println("floatNum: " + floatNum);
     }
 }
