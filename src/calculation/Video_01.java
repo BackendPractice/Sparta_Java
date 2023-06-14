@@ -4,6 +4,7 @@ package calculation;
 public class Video_01 {
     // 메인 메소드
     public static void main(String[] args) {
+        // 산술 연산
         // 우선순위 연산
         System.out.println(2 + 2 * 2);  // 6
         System.out.println((2 + 2) * 2);  // 8
