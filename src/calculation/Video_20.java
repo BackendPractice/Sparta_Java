@@ -14,21 +14,21 @@ public class Video_20 {
         intList.add(3);
 
         // 조회
-        System.out.println(intList.toString());  // [1, 2, 3]
+        System.out.println(intList);  // [1, 2, 3]
         System.out.println("-----------");
 
         // 수정
         intList.set(0, 28);
-        System.out.println(intList.toString());  // [28, 2. 3]
+        System.out.println(intList);  // [28, 2. 3]
         System.out.println("-----------");
 
         // 삭제
         intList.remove(0);
-        System.out.println(intList.toString());  // [2, 3]
+        System.out.println(intList);  // [2, 3]
         System.out.println("-----------");
 
         // 전체 삭제
-        System.out.println(intList.toString());  // []
+        System.out.println(intList);  // []
         intList.clear();
     }
 }
