@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class Video_20 {
     public static void main(String[] args) {
         // ArrayList
-        ArrayList<Integer> intList = new ArrayList<Integer>();  // 선언 + 생성
+        // 선언 + 생성
+        ArrayList<Integer> intList = new ArrayList<Integer>();
 
         // 추가
         intList.add(1);
