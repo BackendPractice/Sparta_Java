@@ -13,7 +13,9 @@ public class Car {
     boolean lights;  // 자동차 조명의 상태
 
     // 3. 생성자 정의
-    public Car () {}
+    public Car () {
+        System.out.println("생성자가 호출되었습니다. 인스턴스가 생성되었습니다.");
+    }
 
     // 4. 메서드 정의
     // gasPedal
