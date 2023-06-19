@@ -4,13 +4,21 @@ package Week_03;
 // 1. 클래스 선언
 public class Car {
     // 2. 필드 정의
+    // 고유 데이터
     String company;  // 자동차 회사
     String model;  // 자동차 모델
     String color;  // 자동차 색
     double price;  // 자동차 가격
+
+    // 상태 데이터
     double speed;  // 자동차 속도, km/h
     char gear;  // 기어상태(P, R, N, D)
     boolean lights;  // 자동차 조명의 상태
+
+    // 객체 데이터
+    Tire tire;
+    Door door;
+    Handle handle;
 
     // 3. 생성자 정의
     public Car () {
