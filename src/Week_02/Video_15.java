@@ -1,6 +1,4 @@
-package calculation;
-
-import java.util.Arrays;
+package Week_02;
 
 public class Video_15 {
     public static void main(String[] args) {

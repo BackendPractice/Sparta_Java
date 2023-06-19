@@ -1,4 +1,4 @@
-package calculation;
+package Week_02;
 
 public class Video_17 {
     public static void main(String[] args) {
