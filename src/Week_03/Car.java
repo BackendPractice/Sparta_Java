@@ -1,61 +1,49 @@
 package Week_03;
 
-// 클래스
-// 1. 클래스 선언
 public class Car {
-    // 2. 필드 정의
+    // 필드
     // 고유 데이터
-    String company;  // 자동차 회사
-    String model;  // 자동차 모델
-    String color;  // 자동차 색
-    double price;  // 자동차 가격
+    String company;
+    String model = "GV80";  // 초기화
+    String color;
+    double price;
 
     // 상태 데이터
-    double speed;  // 자동차 속도, km/h
-    char gear;  // 기어상태(P, R, N, D)
-    boolean lights;  // 자동차 조명의 상태
+    double speed;
+    char gear;
+    boolean lights = true;  // 초기화
 
     // 객체 데이터
-    Tire tire;
+    Tire tire = new Tire();  // 초기화
     Door door;
     Handle handle;
 
-    // 3. 생성자 정의
+    // 생성자
     public Car () {
-        System.out.println("생성자가 호출되었습니다. 인스턴스가 생성되었습니다.");
+        System.out.println("자동차가 생성되었습니다.");
     }
 
-    // 4. 메서드 정의
-    // gasPedal
-    // input : km/h(double), output : speed(double)
+    // 메서드
     double gasPedal(double kmh) {
         speed = kmh;
         return speed;
     }
 
-    // breakPedal
-    // input : x, output : speed(double)
     double breakPedal() {
         speed = 0;
         return speed;
     }
 
-    // changeGear
-    // input : gearType(char), output : gear(char)
     char changeGear(char gearType) {
         gear = gearType;
         return gear;
     }
 
-    // onOffLight
-    // input : x, output : lights(boolean)
     boolean onOffLight() {
         lights = !lights;
         return lights;
     }
 
-    // horn
-    // input : x, output : x
     void horn() {
         System.out.println("빵 빵 ~");
     }
