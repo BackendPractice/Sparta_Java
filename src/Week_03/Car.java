@@ -24,7 +24,8 @@ public class Car {
     }
 
     // 메서드
-    double gasPedal(double kmh) {
+    double gasPedal(double kmh, char type) {
+        changeGear(type);  // 엑셀을 밟으면 기어가 변한다.
         speed = kmh;
         return speed;
     }
@@ -46,5 +47,12 @@ public class Car {
 
     void horn() {
         System.out.println("빵 빵 ~");
+    }
+
+    // 자동차 속도를 구하는 함수 (가변 매개 변수)
+    void carSpeeds(double ... speeds) {
+        for (double speed : speeds) {
+            System.out.println("속도 : " + speed);
+        }
     }
 }
