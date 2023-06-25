@@ -18,6 +18,5 @@ public class Main {
         System.out.println(c instanceof Object);  // true
         System.out.println(c instanceof Parent);  // true
         System.out.println(c instanceof Child);   // true
-
     }
 }
