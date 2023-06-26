@@ -9,8 +9,9 @@ public class Calculator {
             case "곱하기": return firstNumber*secondNumber;
             case "나머지": return firstNumber%secondNumber;
 
-            default: return 0;
+            default:
+                System.out.println("입력하신 연산은 수행할 수 없어요");
+                return 0;
         }
-
     }
 }
