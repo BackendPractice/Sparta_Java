@@ -1,7 +1,5 @@
 package Week_04.homework;
 
-import Week_03.homework_3.AbstractOperation;
-
 public class Calculator {
     private int firstNumber;
     private int secondNumber;

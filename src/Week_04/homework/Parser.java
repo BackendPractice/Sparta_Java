@@ -8,19 +8,50 @@ public class Parser {
 
     private final Calculator calculator = new Calculator();
 
-    public Parser parseFirstNum(String firstInput) {
+    public Parser parseFirstNum(String firstInput) throws Exception{
         // 구현 1.
-        return this;  // 에러를 없애기 위한 임시방편
+        if (!Pattern.matches(NUMBER_REG, firstInput)) {
+            throw new BadInputException("정수값");
+        }
+
+        this.calculator.setFirstNumber(Integer.parseInt(firstInput));
+
+        return this;
     }
 
-    public Parser parseSecondNum(String secondInput) {
+    public Parser parseSecondNum(String secondInput) throws Exception {
         // 구현 1.
-        return this;  // 에러를 없애기 위한 임시방편
+        if (!Pattern.matches(NUMBER_REG, secondInput)) {
+            throw new BadInputException("정수값");
+        }
+
+        this.calculator.setSecondNumber(Integer.parseInt(secondInput));
+
+        return this;
     }
 
-    public Parser parseOperator(String operationInput) {
+    public Parser parseOperator(String operationInput) throws Exception {
         // 구현 1.
-        return this;  // 에러를 없애기 위한 임시방편
+        if (!Pattern.matches(OPERATION_REG, operationInput)) {
+            throw new BadInputException("사칙연산 연산자");
+        }
+
+        switch (operationInput) {
+            case "+" :
+                this.calculator.setOperation(new AddOperation());
+                break;
+            case "-" :
+                this.calculator.setOperation(new SubstractOperation());
+                break;
+            case "*" :
+                this.calculator.setOperation(new MultiplyOperation());
+                break;
+            case "/" :
+                this.calculator.setOperation(new DivideOperation());
+                break;
+        }
+
+        return this;
     }
 
     public double executeCalculator() {
