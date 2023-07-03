@@ -24,6 +24,7 @@ public class Main {
 
         multiThread_1.start();
         multiThread_2.start();
+        System.out.println("메인 쓰레드 테스트");
         System.out.println(Thread.currentThread().getName());
 
         // main

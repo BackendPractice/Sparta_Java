@@ -11,6 +11,7 @@ public class Main {
         singleThread.setName("singleThread");
 
         singleThread.start();
+        System.out.println("메인 쓰레드 테스트");
         System.out.println(Thread.currentThread().getName());  // main
     }
 }
