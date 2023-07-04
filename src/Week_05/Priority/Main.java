@@ -15,7 +15,9 @@ public class Main {
         };
 
         Thread thread1 = new Thread(task1);
+        // 우선순위 설정
         thread1.setPriority(8);
+        // 우선순위 확인
         int threadPriority = thread1.getPriority();
         System.out.println("threadPriority = " + threadPriority);  // threadPriority = 8
 
@@ -23,7 +25,7 @@ public class Main {
         thread2.setPriority(2);
 
         // 순서가 뒤죽박죽으로 출력된다.
-        // 우선 순위가 높다고 반드시 쓰레드가 먼저 실행되고, 종료되는 것이 아니다.
+        // 우선 순위가 높다고 반드시 쓰레드가 먼저 실행되고, 종료되는 것이 아니다. 확률이 높은 것일 뿐이다.
         thread1.start();
         thread2.start();
     }
