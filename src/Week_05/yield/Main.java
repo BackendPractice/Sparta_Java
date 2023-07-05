@@ -5,10 +5,12 @@ public class Main {
         Runnable task = () -> {
             try {
                 for (int i = 0; i < 10; i++) {
+                    // run 도중 interrupt가 발생했기 때문에 catch문이 실행된다.
                     Thread.sleep(1000);
                     System.out.println(Thread.currentThread().getName());
                 }
             } catch (InterruptedException e) {
+                e.printStackTrace();
                 // 쓰레드 양보하기
                 Thread.yield();
             }
@@ -39,6 +41,10 @@ public class Main {
 // thread1
 // thread2
 // thread1
+//java.lang.InterruptedException: sleep interrupted
+//        at java.base/java.lang.Thread.sleep(Native Method)
+//        at Week_05.yield.Main.lambda$main$0(Main.java:8)
+//        at java.base/java.lang.Thread.run(Thread.java:833)
 // thread2
 // thread2
 // thread2

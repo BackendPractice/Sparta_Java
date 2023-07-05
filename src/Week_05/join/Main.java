@@ -17,7 +17,7 @@ public class Main {
         // 현재 시간 구하기
         long start = System.currentTimeMillis();
 
-        // main 쓰레드가 thread의 작업이 끝날때까지 기다린다.
+        // main 쓰레드가 thread 쓰레드의 작업이 끝날때까지 기다린다.
         try {
             thread.join();
         } catch (InterruptedException e) {

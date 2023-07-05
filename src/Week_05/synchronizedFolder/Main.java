@@ -12,6 +12,7 @@ public class Main {
 
         };
 
+        // 3개의 쓰레드를 한 번에 만들어 실행하기
         for (int i = 0; i < 3; i++) {
             new Thread(task).start();
         }
