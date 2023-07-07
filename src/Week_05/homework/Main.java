@@ -47,10 +47,13 @@ public class Main {
         // 레버리지
 
         // 책 제목에 "경제"라는 용어가 들어간 책 제목 조회
-        bookList.stream()
-                .filter(book -> book.getBookName().contains("경제"))
-                .forEach(book -> System.out.println(book.getBookName()));
+//        bookList.stream()
+//                .filter(book -> book.getBookName().contains("경제"))
+//                .forEach(book -> System.out.println(book.getBookName()));
 
-        
+        // 가격이 가장 비싼 책 가격 조회
+        double maxPrice = bookList.stream().mapToDouble(Book::getPrice)
+                .max().getAsDouble();
+        System.out.println(maxPrice);  // 40500.0
     }
 };
