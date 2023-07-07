@@ -52,8 +52,17 @@ public class Main {
 //                .forEach(book -> System.out.println(book.getBookName()));
 
         // 가격이 가장 비싼 책 가격 조회
-        double maxPrice = bookList.stream().mapToDouble(Book::getPrice)
-                .max().getAsDouble();
-        System.out.println(maxPrice);  // 40500.0
+//        double maxPrice = bookList.stream().mapToDouble(Book::getPrice)
+//                .max().getAsDouble();
+//        System.out.println(maxPrice);  // 40500.0
+
+        // 카테고리가 IT인 책들의 가격 합 조회
+        double sumPrice = bookList.stream()
+                .filter(book -> book.getCategory().equals("IT"))
+                .mapToDouble(Book :: getPrice)
+                .sum();
+        System.out.println(sumPrice);
+
+        // IT 책 할인 이벤트
     }
 };
