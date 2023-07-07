@@ -33,9 +33,9 @@ public class Main {
         // 여행의 시간
 
         // 가격이 16200원 이하인 책 제목 조회
-        bookList.stream()
-                .filter(book -> book.getPrice() <= 16200)
-                .forEach(book -> System.out.println(book.getBookName()));
+//        bookList.stream()
+//                .filter(book -> book.getPrice() <= 16200)
+//                .forEach(book -> System.out.println(book.getBookName()));
         // 데이터 분석가의 숫자유감
         // 오늘부터 IT를 시작합니다
         // 그림으로 이해하는 인지과학
@@ -45,5 +45,12 @@ public class Main {
         // 경제 전쟁의 흑역사
         // 정하준의 경제학 레시피
         // 레버리지
+
+        // 책 제목에 "경제"라는 용어가 들어간 책 제목 조회
+        bookList.stream()
+                .filter(book -> book.getBookName().contains("경제"))
+                .forEach(book -> System.out.println(book.getBookName()));
+
+        
     }
 };
