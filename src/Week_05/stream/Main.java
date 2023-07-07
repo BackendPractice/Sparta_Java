@@ -7,9 +7,11 @@ public class Main {
     public static void main(String[] args) {
         List<String> carNames = Arrays.asList("Series 6", "A9", "Ionic 6");
 
-        System.out.println(carNames.stream()
-                .map(name -> name.toUpperCase()).toList());
+        carNames.stream()
+                .forEach(System.out::println);
 
-        // [SERIES 6, A9, IONIC 6]
+        // Series 6
+        // A9
+        // Ionic 6
     }
 }
