@@ -25,9 +25,25 @@ public class Main {
                 new Book(17L, "레버리지", "롭 무어", "경제", 16200)
         );
         // 카테고리가 여행인 책 조회하기
-        bookList.stream().filter((book) -> book.getCategory().equals("여행")).forEach(book -> System.out.println(book.getBookName()));
+//        bookList.stream()
+//                .filter((book) -> book.getCategory().equals("여행"))
+//                .forEach(book -> System.out.println(book.getBookName()));
         // 괜찮아, 그 길 끝에 행복이 기다릴 거야
         // 여행의 이유
         // 여행의 시간
+
+        // 가격이 16200원 이하인 책 제목 조회
+        bookList.stream()
+                .filter(book -> book.getPrice() <= 16200)
+                .forEach(book -> System.out.println(book.getBookName()));
+        // 데이터 분석가의 숫자유감
+        // 오늘부터 IT를 시작합니다
+        // 그림으로 이해하는 인지과학
+        // 여행의 이유
+        // 여행의 시간
+        // 로봇 시대 살아남기
+        // 경제 전쟁의 흑역사
+        // 정하준의 경제학 레시피
+        // 레버리지
     }
 };
