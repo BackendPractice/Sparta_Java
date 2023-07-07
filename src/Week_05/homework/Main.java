@@ -1,5 +1,6 @@
 package Week_05.homework;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -57,12 +58,48 @@ public class Main {
 //        System.out.println(maxPrice);  // 40500.0
 
         // 카테고리가 IT인 책들의 가격 합 조회
-        double sumPrice = bookList.stream()
-                .filter(book -> book.getCategory().equals("IT"))
-                .mapToDouble(Book :: getPrice)
-                .sum();
-        System.out.println(sumPrice);
+//        double sumPrice = bookList.stream()
+//                .filter(book -> book.getCategory().equals("IT"))
+//                .mapToDouble(Book :: getPrice)
+//                .sum();
+//        System.out.println(sumPrice);
 
         // IT 책 할인 이벤트
+        // 카테고리가 IT인 책들의 가격을 40% 할인하여 책 리스트 만들기
+        List<Book> discountedBookList = bookList.stream()
+                .filter(book -> book.getCategory().equals("IT"))
+                .map(mappedBook -> {
+                    mappedBook.setPrice(mappedBook.getPrice() * 0.6);
+                    return mappedBook;
+                }).toList();
+
+        for (Book book : discountedBookList) {
+            System.out.println(book.getBookName());
+            System.out.println(book.getPrice());
+            System.out.println();
+        }
+        // 모두의 딥러닝
+        // 12960.0
+
+        // 이득우의 게임 수학
+        // 24300.0
+
+        // 자바 웹 개발 워크북
+        // 18900.0
+
+        // 실전 시계열 분석
+        // 20520.0
+
+        // 데이터 분석가의 숫자유감
+        // 8640.0
+
+        // 스프링 부트 실전 활용 마스터
+        // 15120.0
+
+        // 오늘부터 IT를 시작합니다
+        // 9720.0
+
+        // 그림으로 이해하는 인지과학
+        // 9720.0
     }
 };
